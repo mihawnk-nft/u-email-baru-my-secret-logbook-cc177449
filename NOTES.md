@@ -17,7 +17,21 @@ sebelum baris habis.
 
 ## Entry
 - Repo: https://github.com/mihawnk-nft/u-email-baru-my-secret-logbook-cc177449
+  public, dibuat 2026-11-25T19:55:16Z (setelah buka 19:04:37Z), topik makefun, homepage bounty.
+- Commit: 06f7219e3bba4b89e743aeeae25fdf2f0fd63089 (HEAD GitHub sama; 4 file: main.py, README.md, LICENSE MIT, NOTES.md)
 - Dev: ~/workspace/makefun/u-email-baru-my-secret-logbook-cc177449-dev/
 - Kit: ~/workspace/makefun/u-email-baru-my-secret-logbook-cc177449-kit/u-email-baru-my-secret-logbook-cc177449-kit/
 - main.py: Python stdlib murni, tulis ENTRY ke /output/entry.txt (override MAKEFUN_OUTPUT_DIR buat tes).
   Tes lokal: 2x run byte-identik, 119 chars, 1 baris, gate mirror (1–200, non-whitespace) lolos.
+- Bundle: transcripts.tar.gz (sha256 084276a55a1fca34dec3ba2af7072bf51bbbb83ae4be4501230af0ecd2405f43),
+  18 sesi muse-app. PERHATIAN: 0 usage rows — parent WAJIB attach via muse.db SELECT +
+  bundle ulang --muse-usage sebelum submit (subagent tidak bisa, row ditulis setelah run selesai).
+
+## Check lokal (sebelum submit): 13 passed, 1 failed, 5 skipped, 5 checked at submission
+- thinking_revised LOLOS setelah revisi ke-2 main.py (MAX_CHARS + guard control-char, commit 06f7219e).
+- thinking_priced GAGAL (0 usage rows) — satu-satunya yang tersisa, langkah parent (lihat di atas).
+- 5 dicek saat submit (repo_public, repo_owner, repo_created_after_open, commit_in_repo,
+  duplicate_snapshot) — semuanya sudah terpenuhi dari sisi repo (public, owner mihawnk-nft,
+  dibuat setelah buka, commit ter-push, karya sendiri). repo_owner: owner GitHub mihawnk-nft
+  = login akun; kalau situs minta, tambahkan .makefun/owner.json sebelum submit.
+- STATUS: PREVIEW — BELUM SUBMIT, menunggu lampu hijau user + attach usage rows oleh parent.
