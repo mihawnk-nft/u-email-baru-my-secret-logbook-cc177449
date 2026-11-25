@@ -12,9 +12,11 @@ ENTRY = (
 # Gate mirror: the sealed scorer accepts UTF-8 text of 1-200 characters,
 # not only white space, on a single line. Fail loudly here, never ship
 # an entry the gate would refuse.
-assert 1 <= len(ENTRY) <= 200, "entry must be 1-200 characters"
+MAX_CHARS = 200
+assert 1 <= len(ENTRY) <= MAX_CHARS, "entry must be 1-200 characters"
 assert "\n" not in ENTRY, "entry must be one line"
 assert ENTRY.strip() == ENTRY, "entry must not start or end with whitespace"
+assert all(ord(c) >= 0x20 for c in ENTRY), "entry must hold no control characters"
 
 
 def main():
